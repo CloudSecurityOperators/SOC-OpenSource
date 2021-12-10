@@ -12,7 +12,7 @@ This Projects serves below usecases:
  - **Enrich** Data feeds with Open Source Threat Intelligence Platoform
 
 # Architecture Diagram:
-<p align="center"> <img src="images/SIEM.png"> </p>
+<p align="center"> <img src="images/SIEM2.png"> </p>
 
 # Components used in this Project:
 All of the components used in this projects are Open Source.
@@ -21,5 +21,42 @@ All of the components used in this projects are Open Source.
     - Official GitRepo of TheHive is **[HERE](https://github.com/TheHive-Project/TheHive)**
  - **Cortex**: Cortex, an open source and free software, has been created by TheHive Project for this very purpose. Observables, such as IP and email addresses, URLs, domain names, files or hashes, can be analyzed one by one or in bulk mode using a Web interface. Analysts can also automate these operations thanks to the Cortex REST API.
     - Official GitRepo of Cortex is **[HERE](https://github.com/TheHive-Project/Cortex)**
- - **MISP**: 
+ - **MISP**: MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threats about cyber security incidents analysis and malware analysis. MISP is designed by and for incident analysts, security and ICT professionals or malware reversers to support their day-to-day operations to share structured information efficiently.
+   - Official GitRepo of MISP is **[HERE](https://github.com/MISP/MISP)**
+ - **Jupyter Notebook**: The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations etc.
+   - Official website of Jupyter is **[HERE](https://jupyter.org/)**
+
+# Installation Requirements: 
+We have created the environment in AWS. You can follow along or choose any other alternative cloud provider. Or ever you can utilize EKS to deploy the full setup.
+## VM Requirements:
+ - MISP- Ubuntu20- t3.micro
+ - Elastic SIEM- Ubuntu20- t2.medium (Best performence can be achived on t2.large)
+ - Cortex- Ubuntu20- t3a.medium (Can work on t2.medium as well)
+ - TheHive- Ubuntu20- t2.medium
+## Network Rules:
+| Ports | IP Ranges | Comments |
+| --- | --- | --- |
+| 22 | Your IP | SSH to the VMs |
+| 443 | Your IP | Accessing MISP UI on browser|
+| 9200 | Your IP | Accessing ElasticSearch|
+| 5601 | Your IP | Accessing Kibana UI
+| 9001 | Your IP | Accessing Cortex UI|
+| 9000 | Your IP | Accessing TheHive UI|
+| All TCP | Cortex VM IP | Accssing inbound API|
+| All TCP | MISP VM IP | Accssing inbound API|
+| All TCP | TheHive VM IP | Accssing inbound API|
+
+# Installation Guide:
+We will install and configure all of the components First and will move to Integrating them one by one.
+## Elasticsearch-Kiaban:
+ - SSH into your VM created for Elastic SIEM
+ ```bash
+ sudo apt update
+ sudo apt upgrade
+ sudo apt install docker-compose
+ sudo apt install docker.io
+ cd /
+ wget 
+ ```
+
 
