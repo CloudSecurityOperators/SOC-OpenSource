@@ -35,3 +35,22 @@ All of the components used in this projects are Open Source.
  - **Jupyter Notebook**: The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations etc.
    - Official website of Jupyter is **[HERE](https://jupyter.org/)**
 
+# Installation-Requirements: 
+We have created the environment in AWS. You can follow along or choose any other alternative cloud provider. Or ever you can utilize EKS to deploy the full setup.
+## VM Requirements:
+ - MISP- Ubuntu20- t3.micro
+ - Elastic SIEM- Ubuntu20- t2.medium (Best performence can be achived on t2.large)
+ - Cortex- Ubuntu20- t3a.medium (Can work on t2.medium as well)
+ - TheHive- Ubuntu20- t2.medium
+## Network Rules:
+| Ports | IP Ranges | Comments |
+| --- | --- | --- |
+| 22 | Your IP | SSH to the VMs |
+| 443 | Your IP | Accessing MISP UI on browser|
+| 9200 | Your IP | Accessing ElasticSearch|
+| 5601 | Your IP | Accessing Kibana UI
+| 9001 | Your IP | Accessing Cortex UI|
+| 9000 | Your IP | Accessing TheHive UI|
+| All TCP | Cortex VM IP | Accssing inbound API|
+| All TCP | MISP VM IP | Accssing inbound API|
+| All TCP | TheHive VM IP | Accssing inbound API|
