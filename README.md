@@ -176,7 +176,7 @@ netstat -ltpnd #you should see the server is listening on 9000
  - Please note that the service may take some time to start. Once it is started, you may launch your browser and connect to http://YOUR_SERVER_ADDRESS:9000/.
  - The default admin user is admin@thehive.local with password secret. It is recommended to change the default password.
        
-# Cortex
+## Cortex
  - SSH into the EC2 VM created for Cortex
  - You can follow the detailed documentation **[HERE](https://github.com/TheHive-Project/CortexDocs/blob/master/installation/install-guide.md#elasticsearch-installation)**
  - Referring below steps for installation on Ubuntu20
@@ -194,6 +194,8 @@ sudo apt install elasticsearch
 network.host: 0.0.0.0 #Uncomment + mentioned UniversalIP address for production use
 http.port: 9200 #Uncomment this line
 discovery.seed_hosts #Uncomment this line
+node.name: node1 #Uncomment this line
+cluster.initial_master_nodes: ["node1"] #uncomment this line and change acoordingly       
 http.host: 127.0.0.1
 cluster.name: hive
 thread_pool.search.queue_size: 100000
@@ -202,5 +204,73 @@ thread_pool.search.queue_size: 100000
 sudo systemctl enable elasticsearch.service
 sudo systemctl start elasticsearch.service
 sudo systemctl status elasticsearch.service
-      
+
+#Setup apt configuration with the release repository for Cortex
+curl https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY | sudo apt-key add -
+echo 'deb https://deb.thehive-project.org release main' | sudo tee -a /etc/apt/sources.list.d/thehive-project.list
+sudo apt-get update
+sudo apt install cortex
+
+#Create Cortex key of the server
+sudo mkdir /etc/cortex
+(cat << _EOF_
+# Secret key
+# ~~~~~
+# The secret key is used to secure cryptographics functions.
+# If you deploy your application to several instances be sure to use the same key!
+play.http.secret.key="$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1)"
+_EOF_
+) | sudo tee -a /etc/cortex/application.conf
+
+#Make modification in the cortex config file- /etc/cortex/application.conf
+## ElasticSearch
+search {
+   uri = "http://Cortex_vm_ip:9200"
+
+#Save config and Run Cortex service
+sudo systemctl start cortex
+tail -f /var/log/cortex/application.log #verify if cortex is starting successfully or not
+       
+#Access Cortex UI from browser using http://Cortex_VM_IP:9001/       
 ``` 
+ - Once you are done with the installation and you access the Cortex UI, follow this [QUICK START](https://github.com/TheHive-Project/CortexDocs/blob/master/admin/quick-start.md) guide to set up Cortex   
+### Setting up Analyzers and responders       
+Neurons (analyzers and responders) are not embedded anymore in docker image. The recommended method to run neurons is to use docker. Official neurons have their own image is dockerhub under cortexneurons organisation. The catalog of available neurons is provided to Cortex using --analyzer-url/--responder-url parameters.
+ - Currently, all the analyzers and responders supported by TheHive Project are written in Python 2 or 3. They don't require any build phase but their dependencies have to be installed. Before proceeding, you'll need to install the system package dependencies that are required by some of them.
+ - Also you need to make sure you have python2, python3, pip2, pip3 all present in the VM, otherwise it will cause errors. You can follow below steps to ensure them.
+```bash
+#Get pip2
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+python2 get-pip.py
+
+#Get python2
+sudo apt install python2.7       
+
+#Dependencies & setup tools
+sudo apt-get install -y --no-install-recommends python-pip python2.7-dev python3-pip python3-dev ssdeep libfuzzy-dev libfuzzy2 libimage-exiftool-perl libmagic1 build-essential git libssl-dev
+sudo pip install -U pip setuptools && sudo pip3 install -U pip setuptools
+       
+#Once finished, clone the Cortex-analyzers repository in the directory of your choosing
+git clone https://github.com/TheHive-Project/Cortex-Analyzers
+
+#Install Analyzers
+for I in $(find Cortex-Analyzers -name 'requirements.txt'); do sudo -H pip2 install -r $I; done && \
+for I in $(find Cortex-Analyzers -name 'requirements.txt'); do sudo -H pip3 install -r $I || true; done
+
+#Change the path of Analyzers in config file- /etc/cortex/application.conf
+analyzer {
+  # Directory that holds analyzers
+  path = [
+    "/path/to/default/analyzers",
+    "/path/to/my/own/analyzers" #Change it here, for us it was /opt/cortex/Cortex-Analyzers/analyzers
+  ]  
+
+#Save the config and Restart Cortex service
+sudo systemctl restart cortex
+       
+```       
+ - Now refresh the Cortex UI with the newly created user, you should see the analyzers.
+       
+## MISP
+ - You can refer the clear installation Steps [HERE](https://misp.github.io/MISP/INSTALL.ubuntu2004/)
+ - For setting up the MISP for first time, watch the tutorial [HERE](https://youtu.be/gSzop2pKM1I)
