@@ -54,3 +54,11 @@ We have created the environment in AWS. You can follow along or choose any other
 | All TCP | Cortex VM IP | Accssing inbound API|
 | All TCP | MISP VM IP | Accssing inbound API|
 | All TCP | TheHive VM IP | Accssing inbound API|
+
+# Contributing
+We welcome your contributions. Please feel free to fork the code, play with it, make some patches and send us pull requests. 
+
+# Support
+ - Please [open an issue on GitHub](https://github.com/archanchoudhury/SOC-OpenSource/issues/new) if you'd like to report a bug or request a feature.
+ - For real DFIR Training, subscribe to my [YouTube Channel](https://www.youtube.com/c/BlackPerl)
+ - If you like to support my creation, [Buy me a Coffee ☕](https://www.buymeacoffee.com/BlackPerl)
