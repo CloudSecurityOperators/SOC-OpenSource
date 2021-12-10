@@ -1,5 +1,5 @@
 ## PRESENTED BY <p align="center"> <img src="images/Logo-Transparent for Black BG.png" width="220" height="200"> </p>
-# SOC-OpenSource
+# 🔴SOC-OpenSource
 This is a Project Designed for Security Analysts and all SOC audiences who wants to play with implementation and explore the Modern SOC architecture. All of the componenets are used based on Open Source Projects(Availabe at the time of first commit). 
 
 This Projects serves below usecases:
@@ -12,7 +12,7 @@ This Projects serves below usecases:
  - Actively respond to threats and interact with the constituency and other teams
  - **Enrich** Data feeds with Open Source Threat Intelligence Platoform
 
-# Index:
+# 📑Index:
  - [Architecture Diagram](#Architecture-Diagram)
  - [Components used in this Project](#Components)
  - [Installation Requirements](#Installation-Requirements)
@@ -21,10 +21,10 @@ This Projects serves below usecases:
  - [Contributing](#Contributing)
  - [Support](#Support)
 
-# Architecture-Diagram:
+# ☸Architecture-Diagram:
 <p align="center"> <img src="images/SIEM2.png"> </p>
 
-# Components:
+# ☸Components:
 All of the components used in this projects are Open Source.
  - **Elastic SIEM**: Open source SIEM platform powered by ElasticSearch, Logstash, Kibana
  - **TheHive**: [TheHive](https://thehive-project.org/) is a scalable 3-in-1 open source and free Security Incident Response Platform designed to make life easier for SOCs, CSIRTs, CERTs and any information security practitioner dealing with security incidents that need to be investigated and acted upon swiftly.
@@ -36,14 +36,14 @@ All of the components used in this projects are Open Source.
  - **Jupyter Notebook**: The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations etc.
    - Official website of Jupyter is **[HERE](https://jupyter.org/)**
 
-# Installation-Requirements: 
+# 🔽Installation-Requirements: 
 We have created the environment in AWS. You can follow along or choose any other alternative cloud provider. Or ever you can utilize EKS to deploy the full setup.
-## VM Requirements:
+## ☁VM Requirements:
  - MISP- Ubuntu20- t3.micro
  - Elastic SIEM- Ubuntu20- t2.medium (Best performence can be achived on t2.large)
  - Cortex- Ubuntu20- t3a.medium (Can work on t2.medium as well)
  - TheHive- Ubuntu20- t2.medium
-## Network Rules:
+## 🌏Network Rules:
 | Ports | IP Ranges | Comments |
 | --- | --- | --- |
 | 22 | Your IP | SSH to the VMs |
@@ -56,10 +56,10 @@ We have created the environment in AWS. You can follow along or choose any other
 | All TCP | MISP VM IP | Accssing inbound API|
 | All TCP | TheHive VM IP | Accssing inbound API|
 
-# Contributing
+# 🤝Contributing
 We welcome your contributions. Please feel free to fork the code, play with it, make some patches and send us pull requests. 
 
-# Support
+# 🙏Support
  - Please [open an issue on GitHub](https://github.com/archanchoudhury/SOC-OpenSource/issues/new) if you'd like to report a bug or request a feature.
  - For real DFIR Training, subscribe to my [YouTube Channel](https://www.youtube.com/c/BlackPerl)
  - If you like to support my creation, <p align="left"><a href="https://www.buymeacoffee.com/BlackPerl"> <img src="images/KULQlzAg.png" width="210" height="60"></p>
