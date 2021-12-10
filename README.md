@@ -1,3 +1,4 @@
+## PRESENTED BY <p align="center"> <img src="images/Logo-Transparent for Black BG.png" width="220" height="200"> </p>
 # SOC-OpenSource
 This is a Project Designed for Security Analysts and all SOC audiences who wants to play with implementation and explore the Modern SOC architecture. All of the componenets are used based on Open Source Projects(Availabe at the time of first commit). 
 
@@ -17,8 +18,8 @@ This Projects serves below usecases:
  - [Installation Requirements](#Installation-Requirements)
  - [Installation Guide](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/installation/install.md)
  - [Integration Guide]
- - [Contributing]
- - [Support]
+ - [Contributing](#Contributing)
+ - [Support](#Support)
 
 # Architecture-Diagram:
 <p align="center"> <img src="images/SIEM2.png"> </p>
@@ -61,4 +62,4 @@ We welcome your contributions. Please feel free to fork the code, play with it, 
 # Support
  - Please [open an issue on GitHub](https://github.com/archanchoudhury/SOC-OpenSource/issues/new) if you'd like to report a bug or request a feature.
  - For real DFIR Training, subscribe to my [YouTube Channel](https://www.youtube.com/c/BlackPerl)
- - If you like to support my creation, [Buy me a Coffee ☕](https://www.buymeacoffee.com/BlackPerl)
+ - If you like to support my creation, <p align="left"><a href="https://www.buymeacoffee.com/BlackPerl"> <img src="images/KULQlzAg.png" width="210" height="60"></p>
