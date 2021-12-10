@@ -43,7 +43,8 @@ Add Http Header as below:
   }
   ```
   - Restart Hive Service and refresh the browser. Go to About> You will see Cortex is OK Status. Like below:
-<p align="center"> <img src="images/hive-cortex.PNG"> </p>
+
+<p align="center"> <img src="../images/hive-cortex.PNG"> </p>
 
 ## TheHive-MISP:
   - Login to the MISP UI and go to Administration > List Auth Key
@@ -66,7 +67,8 @@ Add Http Header as below:
   }
  ```
  - Restart Hive Service and refresh the browser. Go to About> You will see MISP is OK Status. Like below:
-<p align="center"> <img src="images/hive-misp.PNG"> </p>
+
+<p align="center"> <img src="../images/hive-misp.PNG"> </p>
 
 ## Cortex-MISP
   - Login to MISP UI
