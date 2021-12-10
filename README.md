@@ -17,7 +17,7 @@ This Projects serves below usecases:
  - [Components used in this Project](#Components)
  - [Installation Requirements](#Installation-Requirements)
  - [Installation Guide](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/installation/install.md)
- - [Integration Guide]
+ - [Integration Guide](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/integration/integration.md)
  - [Contributing](#Contributing)
  - [Support](#Support)
 
