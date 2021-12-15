@@ -35,6 +35,11 @@ All of the components used in this projects are Open Source.
    - Official GitRepo of MISP is **[HERE](https://github.com/MISP/MISP)**
  - **Jupyter Notebook**: The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations etc.
    - Official website of Jupyter is **[HERE](https://jupyter.org/)**
+## Additional Components:
+ - **Snort**: [Snort](https://www.snort.org/) is the foremost Open Source Intrusion Prevention System (IPS) in the world.
+ - **Wazuh**: [Wazuh](https://wazuh.com/) is an open source security monitoring solution which collects and analyzes host security data. It is a fork of the older, better known OSSEC project.
+ - **Honeypot Dionea**: [Dionaea](https://dionaea.readthedocs.io/en/latest/index.html) intention is to trap malware exploiting vulnerabilities exposed by services offered to a network, gaining a copy of the malware.
+
 
 # 🔽Installation-Requirements: 
 We have created the environment in AWS. You can follow along or choose any other alternative cloud provider. Or ever you can utilize EKS to deploy the full setup.
@@ -58,6 +63,9 @@ We have created the environment in AWS. You can follow along or choose any other
 
 # 🤝Contributing
 We welcome your contributions. Please feel free to fork the code, play with it, make some patches and send us pull requests. 
+
+# 🔼Enhancements:
+As per the architecture document, we will be introducing additional components into this architecture. So watch out this space.
 
 # 🙏Support
  - Please [open an issue on GitHub](https://github.com/archanchoudhury/SOC-OpenSource/issues/new) if you'd like to report a bug or request a feature.
