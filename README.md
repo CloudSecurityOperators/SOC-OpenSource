@@ -22,7 +22,7 @@ This Projects serves below usecases:
  - [Support](#Support)
 
 # ☸Architecture-Diagram:
-<p align="center"> <img src="images/SIEM2.png"> </p>
+<p align="center"> <img src="images/SIEM2-1.png"> </p>
 
 # ☸Components:
 All of the components used in this projects are Open Source.
