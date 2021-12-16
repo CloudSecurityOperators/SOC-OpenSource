@@ -313,3 +313,54 @@ $ sudo systemctl daemon-reload
 $ sudo systemctl start snort
 $ sudo systemctl status snort       
 ```       
+## Cowrie Honeypot
+       
+```bash
+$ sudo apt-get update
+
+#Install dependencies packages.
+$ sudo apt-get install -y git python-virtualenv libssl-dev libffi-dev build-essential libpython3-dev python3-minimal authbind virtualenv
+       
+#Create a user account for cowrie.       
+$ sudo adduser --disabled-password cowrie
+$ sudo su - cowrie
+       
+#Download the source code.
+$ git clone http://github.com/cowrie/cowrie
+$ cd cowrie
+       
+#Setup the virtual environment and install prerequisite packages.
+$ virtualenv --python=python3 cowrie-env
+$ source cowrie-env/bin/activate
+$ pip install --upgrade pip
+$ pip install --upgrade -r requirements.txt
+       
+#Make a copy of the default configuration file of cowrie    
+$ cd /home/cowrie/cowrie/etc
+$ cp cowrie.cfg.dist cowrie.cfg
+$ vim cowrie.cfg
+[honeypot]
+hostname = database (here, choose a hostname to trick the attacker)
+listen_endpoints = tcp:22:interface=0.0.0.0 (change the default SSH port to port 22)
+[telnet]
+enabled = true
+listen_endpoints = tcp:23:interface=0.0.0.0     
+       
+#Run authbind to listen as non-root on port 22 and 23 directly.
+$ sudo apt-get install authbind
+$ sudo touch /etc/authbind/byport/22
+$ sudo chown cowrie:cowrie /etc/authbind/byport/22
+$ sudo chmod 770 /etc/authbind/byport/22
+$ sudo touch /etc/authbind/byport/23
+$ sudo chown cowrie:cowrie /etc/authbind/byport/23
+$ sudo chmod 770 /etc/authbind/byport/23
+       
+#Change the default SSH port connection for your operation system.
+$ sudo vim /etc/ssh/sshd_config
+# uncomment the Port line and change the number
+Port 3393
+       
+#Restart ssh service and start
+$ sudo systemctl restart sshd
+$ bin/cowrie start       
+```       
