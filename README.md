@@ -23,7 +23,7 @@ This Projects serves below usecases:
  - [Contributing](#Contributing)
  - [Support](#Support)
 
-# ☸Architecture-Diagram:
+# ☸Architecture-Diagram(Ongoing):
 <p align="center"> <img src="images/SIEM-3.png"> </p>
 
 # ☸Components(First Phase of Implementation):
