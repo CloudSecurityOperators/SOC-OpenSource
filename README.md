@@ -16,15 +16,16 @@ This Projects serves below usecases:
  - [Architecture Diagram](#Architecture-Diagram)
  - [Components used in this Project](#Components)
  - [Installation Requirements](#Installation-Requirements)
- - [Installation Guide](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/installation/install.md)
- - [Integration Guide](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/integration/integration.md)
+ - [Installation Guide First Phase](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/installation/install.md)
+ - [Installation Guide Second Phase](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/installation/install2.md)
+ - [Integration Guide First Phase](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/integration/integration.md)
  - [Contributing](#Contributing)
  - [Support](#Support)
 
 # ☸Architecture-Diagram:
 <p align="center"> <img src="images/SIEM2-1.png"> </p>
 
-# ☸Components:
+# ☸Components(First Phase of Implementation):
 All of the components used in this projects are Open Source.
  - **Elastic SIEM**: Open source SIEM platform powered by ElasticSearch, Logstash, Kibana
  - **TheHive**: [TheHive](https://thehive-project.org/) is a scalable 3-in-1 open source and free Security Incident Response Platform designed to make life easier for SOCs, CSIRTs, CERTs and any information security practitioner dealing with security incidents that need to be investigated and acted upon swiftly.
@@ -33,13 +34,20 @@ All of the components used in this projects are Open Source.
     - Official GitRepo of Cortex is **[HERE](https://github.com/TheHive-Project/Cortex)**
  - **MISP**: MISP is an open source software solution for collecting, storing, distributing and sharing cyber security indicators and threats about cyber security incidents analysis and malware analysis. MISP is designed by and for incident analysts, security and ICT professionals or malware reversers to support their day-to-day operations to share structured information efficiently.
    - Official GitRepo of MISP is **[HERE](https://github.com/MISP/MISP)**
- - **Jupyter Notebook**: The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations etc.
-   - Official website of Jupyter is **[HERE](https://jupyter.org/)**
-## Additional Components:
+
+## Additional Components(Second Phase of Implementation):
  - **Snort**: [Snort](https://www.snort.org/) is the foremost Open Source Intrusion Prevention System (IPS) in the world.
  - **Wazuh**: [Wazuh](https://wazuh.com/) is an open source security monitoring solution which collects and analyzes host security data. It is a fork of the older, better known OSSEC project.
  - **Honeypot Dionea**: [Dionaea](https://dionaea.readthedocs.io/en/latest/index.html) intention is to trap malware exploiting vulnerabilities exposed by services offered to a network, gaining a copy of the malware.
+ - **Jupyter Notebook**: The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations etc.
+   - Official website of Jupyter is **[HERE](https://jupyter.org/)**
+ - **IntelOwl**: [IntelOwl](https://intelowlproject.github.io/) is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain from a single API at scale
+ - **Atomic Red Team™**: [Atomic Red Team™](https://github.com/redcanaryco/atomic-red-team) is library of tests mapped to the MITRE ATT&CK® framework. Security teams can use Atomic Red Team to quickly, portably, and reproducibly test their environments.
+ - **Shuffle**: [Shuffle](https://shuffler.io/) is an Open Source SOAR solution for making orchestration easy between security tools.
+ - **Twitter Bot**: We have created Twitter TI bot to collect meaningful intel about anything we care about and thus giving us the related information around them. You can find the episode [Here](https://youtu.be/onklNNJcfDU)
 
+## Additional Components(Third Phase of Implementation):
+TBD
 
 # 🔽Installation-Requirements: 
 We have created the environment in AWS. You can follow along or choose any other alternative cloud provider. Or ever you can utilize EKS to deploy the full setup.
