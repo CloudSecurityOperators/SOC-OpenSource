@@ -73,7 +73,8 @@ We have created the environment in AWS. You can follow along or choose any other
 We welcome your contributions. Please feel free to fork the code, play with it, make some patches and send us pull requests. 
 
 # 🔼Enhancements:
-As per the architecture document, we will be introducing additional components into this architecture. So watch out this space.
+ - As per the architecture document and Components mentioned we will keep on updating this repo with the staged implementation.
+ - All of the required staged implemtation will be added in the Index page, so you can access them easily from there.
 
 # 🙏Support
  - Please [open an issue on GitHub](https://github.com/archanchoudhury/SOC-OpenSource/issues/new) if you'd like to report a bug or request a feature.
