@@ -1,4 +1,4 @@
-# Installation Guide:
+# Installation Guide(First Phase):
 We will install and configure all of the components First and will move to Integrating them one by one.
 ## Elasticsearch-Kibana:
  - SSH into your VM created for Elastic SIEM
