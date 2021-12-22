@@ -1,3 +1,4 @@
+### TURN ON DARK MODE<p align="left"> <img src="images/Mode-changer.gif" width="150" height="70"> </p>
 ## PRESENTED BY <p align="center"> <img src="images/Logo-Transparent for Black BG.png" width="220" height="200"> </p>
 # 🔴SOC-OpenSource
 This is a Project Designed for Security Analysts and all SOC audiences who wants to play with implementation and explore the Modern SOC architecture. All of the componenets are used based on Open Source Projects(Availabe at the time of first commit). 
