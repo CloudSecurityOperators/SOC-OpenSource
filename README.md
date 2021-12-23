@@ -2,7 +2,7 @@
 ## PRESENTED BY <p align="center"> <img src="images/Logo-Transparent for Black BG.png" width="220" height="200"> </p>
 # 🔴SOC-OpenSource
 This is a Project Designed for Security Analysts and all SOC audiences who wants to play with implementation and explore the Modern SOC architecture. All of the componenets are used based on Open Source Projects(Availabe at the time of first commit). 
-
+**NOTE** - This is an Ongoing Project and the repo will be updated as we build the new additionas to this architecture. 
 This Projects serves below usecases:
  - **Collect Data** to a Single Place.
  - **Normalize** and **Parse Data**
