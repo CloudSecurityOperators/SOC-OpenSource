@@ -19,7 +19,7 @@ This Projects serves below usecases:
  - [Architecture Diagram](#Architecture-Diagram)
  - [Components used in this Project](#Components)
  - [Installation Requirements](#Installation-Requirements)
- - [Installation Guide First Phase](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/installation/install.md)
+ - [Installation Guide First Phase](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/installation/install1.md)
  - [Installation Guide Second Phase](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/installation/install2.md)
  - [Integration Guide First Phase](https://github.com/archanchoudhury/SOC-OpenSource/blob/main/integration/integration.md)
  - [Contributing](#Contributing)
