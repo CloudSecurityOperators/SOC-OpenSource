@@ -6,14 +6,7 @@ We will Integrate all of the components as per the architecture diagram
 
 ## ELK-TheHive:
   - First, let’s create a webhook destination in ELK. 
-```bash
-Management > Stack Management > Alerts & Insights > Rules & Connectors
-Create Connector > Webhook
-Connector Name: As per your Choice
-Method: POST
-URL: http://TheHiveIP:9000/api/case
-Add Http Header as below:
-```
+
 | Key | Value |
 | --- | --- |
 | Content-Type | application/json |
