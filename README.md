@@ -26,7 +26,7 @@ This Projects serves below usecases:
  - [Support](#Support)
 
 # ☸Architecture-Diagram(Ongoing):
-<p align="center"> <img src="images/SIEM-3.png"> </p>
+<p align="center"> <img src="images/simpler-soc.png"> </p>
 
 # ☸Components(First Phase of Implementation):
 All of the components used in this projects are Open Source.
